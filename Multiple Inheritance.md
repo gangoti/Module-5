@@ -32,14 +32,55 @@ To write a Python program to get the name, attendance, and ID of a student and c
 ### PROGRAM
 
 ```
+class Person:  
+    #defining constructor  
+    def __init__(self, personName, personAge):  
+        self.name = personName  
+        self.age = personAge  
+  
+    #defining class methods  
+    def showName(self):  
+        print(self.name)  
+  
+    def showAge(self):  
+        print(self.age)  
+  
+    #end of class definition  
+  
+# defining another class  
+class Student: # Person is the  
+    def __init__(self, studentpercent):  
+        self.studentpercent = studentpercent  
+  
+    def getpercent(self):  
+        return self.studentpercent  
+  
+  
+class Resident(Person, Student): # extends both Person and Student class  
+    def __init__(self, name, age, percent):  
+        Person.__init__(self, name, age)  
+        Student.__init__(self, percent)  
+  
+  
+name=input()
+age=int(input())
+percent=int(input())
+resident1 = Resident(name, age, percent)  
+resident1.showName()  
+resident1.showAge()  
+if resident1.getpercent() > 12000:
+    print("Valid Student")
+else:
+    print("Invalid Student")
+    
 
 ```
 
 ### OUTPUT
+<img width="1177" height="331" alt="438262985-cb85c5c5-5b9a-471e-9ee3-1fef6b3c8074" src="https://github.com/user-attachments/assets/662a4282-bcd7-4b72-afaf-cd9299a5b9ca" />
 
 
 ### RESULT
-
-
+The program successfully collects student details using multiple inheritance and validates them based on name, age, and ID.
 
 
