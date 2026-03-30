@@ -22,10 +22,21 @@ To create a Python class `Student` with a destructor.
 ### PROGRAM
 
 ```
+class Fruits:
+# Calling constructor
+    def __init__(self):
+        print('Fruits created.')
+# Calling destructor
+    def __del__(self):
+        print('Destructor called, Fruits deleted.')
+obj = Fruits()
+del obj
 
 ```
 
 ### OUTPUT
+<img width="1101" height="218" alt="438236431-96d5bec8-a4dc-48ab-88dc-b840b23d03ac" src="https://github.com/user-attachments/assets/b71806f7-c3c4-4442-917d-fea87c475efc" />
 
 
 ### RESULT
+The program successfully adds two numbers using a parameterized constructor and deletes the instance using a destructor.
